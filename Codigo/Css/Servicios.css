@@ -1,12 +1,9 @@
 body { 
-<<<<<<< HEAD
+
     background-color: rgb(182, 245, 227);
     font-family: 'open sans';
-=======
-    background-color:rgb(182, 245, 227);
-    /*font-family: 'open sans';*/
->>>>>>> bb74335da29431a2310790c4e2a6a06abf7550d6
 }
+
 h1{
     background-color: rgb(17, 226, 164);
     list-style: text-align;
