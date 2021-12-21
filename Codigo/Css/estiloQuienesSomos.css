@@ -1,7 +1,7 @@
 body{
-     /*background: url(imagen_fondo3.jpg);
-     background-size: 100%;
-     /*background-repeat: no-repeat;   /* para que no se repita la imagen  */ 
+    background: url("/Css/Imagenes/imagen_fondo3.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;   /* para que no se repita la imagen  */ 
     margin: 0;
 }
 .contenedor {
@@ -66,12 +66,34 @@ body{
     background: #D47AE8;
 }
 
-.main {
-    padding-top: 8rem;
-}
+
 .footer {
     background: aqua;
     padding: 4%;
     text-align: center;
     margin-top: 6rem;
 }
+
+.main {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    height:  100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    position: static;
+ }
+ .tabla {
+    width:  30%;
+    height: 550 px;
+    margin: 10px;
+    border:  1px solid teal;  /*borde de los cuadros */ 
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px violet;
+    padding: 60px;
+    text-align: center;
+    flex-grow: 1;
+    position: initial;
+ }
