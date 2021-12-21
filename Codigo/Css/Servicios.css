@@ -1,5 +1,5 @@
 body{
-    background: url("/Css/Imagenes/imagen_fondo3.jpg");
+    background: url(/Codigo/Css/Imagenes/imagen_fondo3.jpg);
     background-size: 100%;
     /*background-repeat: no-repeat;   /* para que no se repita la imagen  */ 
    margin: 0;
@@ -45,8 +45,8 @@ body{
 }
 
 .logo{
-   background: url(Imagenes/logoLael2.jpg);    
-   width: 100px;     /*ancho del cuadro de la imagen*/
+   background: url(/Codigo/HTML/ImagenesProyecto/logoLael1.png);    
+   width: 150px;     /*ancho del cuadro de la imagen*/
    height: 50px;    /*alto del cuadro de la imagen*/
    
    margin-top: 35px;
@@ -74,7 +74,7 @@ body{
 }
 
 .main {
-   padding-top: 82rem;
+   padding-top: 91rem;
 
 }
 

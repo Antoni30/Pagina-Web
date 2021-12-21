@@ -42,7 +42,7 @@ body{
 }
 
 .logo{
-    background: url(/Codigo/HTML/ImagenesProyecto/logoLael2.jpg);    
+    background: url(/Codigo/HTML/ImagenesProyecto/logoLael1.png); 
     width: 100px;     /*ancho del cuadro de la imagen*/
     height: 50px;    /*alto del cuadro de la imagen*/
     margin-top: 35px;

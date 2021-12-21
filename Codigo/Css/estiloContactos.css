@@ -96,3 +96,14 @@ h2{
     padding: 50px;
     display: block;
 }
+.Contactos{
+    width: 830px;
+    margin:auto;
+    padding: 30px;
+    display: block;
+}
+.integrantes{
+    width:200px;
+    border: 2px solid black;
+    display:inline-flex;
+}
