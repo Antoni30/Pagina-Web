@@ -1,8 +1,9 @@
 body{
-     /*background: url(imagen_fondo3.jpg);
+     background: url(../HTML/ImagenesProyecto/imagen_fondo3.jpg);
      background-size: 100%;
-     /*background-repeat: no-repeat;   /* para que no se repita la imagen  */ 
+     background-repeat: no-repeat;   /* para que no se repita la imagen  */ 
     margin: 0;
+    
 }
 .contenedor {
     width: 85%;
@@ -11,13 +12,13 @@ body{
 }
 
 .header {
-    background: #FFAFAF ; 
+    background: #fd9999 ; 
     color: white; /*color del texto*/ 
     padding: 0px;  /*tamanio del menu*/
 
 
     /*para que se quede estaico al bajar la pagina*/
-    position: fixed;
+    position: relative;
     left: 0px;
     top: 0;
     width: 100%;   /* o wigth: 0; */
@@ -25,7 +26,7 @@ body{
 
 
 .header a {
-    color:  white;
+    color:  rgb(30, 3, 36);
     text-decoration: none;
 }
 
@@ -43,12 +44,13 @@ body{
 
 .logo{
     background: url(/Codigo/HTML/ImagenesProyecto/logoLael2.jpg);    
-    width: 100px;     /*ancho del cuadro de la imagen*/
+    width: 200px;     /*ancho del cuadro de la imagen*/
     height: 50px;    /*alto del cuadro de la imagen*/
     margin-top: 35px;
     margin-bottom: 35px;
     background-repeat: no-repeat;
     display: block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .navegacion ul li{
@@ -59,7 +61,7 @@ body{
     padding: 0.5rem 1rem;   /*tamaño del borde al colocar el cursor*/
     transition: all 0.5s linear;
     border-radius: 5px;
-    font-size: 100%;  /* tamanio de la letra del menu*/
+    font-size: 130%;  /* tamanio de la letra del menu*/
 }
 
 .navegacion ul li a:hover {
@@ -67,11 +69,37 @@ body{
 }
 
 .main {
-    padding-top: 8rem;
+    font-size: 150%;
+    text-align: center;
+    margin-top: 1rem;
 }
+
 .footer {
-    background: aqua;
+    background: rgb(219, 167, 243);
     padding: 4%;
     text-align: center;
     margin-top: 6rem;
+}
+
+.marquesina{
+    width: 1200px;
+    height: 300px;
+    border: 2px solid rgb(185, 94, 155);
+    display: block;
+    margin: auto;
+}
+
+.textoPrincipal{
+    width: 1000px;
+    height: 80px;
+    display: block;
+    margin: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.imagenPrincipal{
+    width: 1000px;
+    height: 310px;
+    display: block;
+    margin: auto;
 }
