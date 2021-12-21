@@ -1,5 +1,5 @@
 body{
-     /*background: url(imagen_fondo3.jpg);
+     background: url(/Codigo/Css/Imagenes/imagen_fondo3.jpg);
      background-size: 100%;
      /*background-repeat: no-repeat;   /* para que no se repita la imagen  */ 
     margin: 0;
@@ -42,8 +42,8 @@ body{
 }
 
 .logo{
-    background: url(/Codigo/HTML/ImagenesProyecto/logoLael2.jpg);    
-    width: 100px;     /*ancho del cuadro de la imagen*/
+    background: url(/Codigo/HTML/ImagenesProyecto/logoLael1.png);    
+    width: 150px;     /*ancho del cuadro de la imagen*/
     height: 50px;    /*alto del cuadro de la imagen*/
     margin-top: 35px;
     margin-bottom: 35px;
@@ -67,11 +67,32 @@ body{
 }
 
 .main {
-    padding-top: 8rem;
+    padding-top: 10rem;
 }
 .footer {
     background: aqua;
     padding: 4%;
     text-align: center;
     margin-top: 6rem;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.cajaPrincipal{
+    width: 800px;
+    border: 2px solid black;
+    padding: 50px;
+    margin: auto;
+    display: block;
+    border-radius: 50px;
+}
+.cajaFormulario{
+    width: 610px;
+    border: 2px solid black;
+    margin: auto;
+    padding: 50px;
+    display: block;
 }
