@@ -49,6 +49,7 @@ body{
     margin-bottom: 35px;
     background-repeat: no-repeat;
     display: block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .navegacion ul li{
@@ -88,14 +89,48 @@ h2{
     margin: auto;
     display: block;
     border-radius: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.cajaFormulario{
-    width: 610px;
+.cajaFormularioGrid{
+    width: 670px;
+    height: 320px;
     border: 2px solid black;
     margin: auto;
     padding: 50px;
-    display: block;
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3];
+    grid-template-rows: [y0] 1fr [y1] 1fr [y2] 1fr [y3];
+    grid-template-areas: "informacion" "fecha" "servicios" "general";
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.a {
+    grid-area: informacion; background: blue ;
+    grid-column: x0 / x3;
+}
+
+.b { 
+    grid-area: fecha; background: red ;
+    grid-row: y1 / y2;
+}
+
+.c { 
+    grid-area: general; background: green ;
+    grid-column: x1 / x3;
+    grid-row: y1 / y3;
+}
+
+.d { 
+    grid-area: servicios; background: orange;
+    grid-column: x0 / x3;
+    grid-row: y2;
+}
+.e{
+    grid-area: fecha; background: red ;
+}
+.f{
+    grid-area: informacion; background: blue ;
+}
+
 .Contactos{
     width: 830px;
     margin:auto;
@@ -106,4 +141,10 @@ h2{
     width:200px;
     border: 2px solid black;
     display:inline-flex;
+    
+}
+.map{
+    width: 500px;
+    margin: auto;
+    padding: 20px;
 }
