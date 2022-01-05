@@ -11,21 +11,22 @@ body{
 }
 
 .header {
-    background: #FFAFAF ; 
+    background: #fd9999 ; 
     color: white; /*color del texto*/ 
     padding: 0px;  /*tamanio del menu*/
 
 
     /*para que se quede estaico al bajar la pagina*/
-    position: fixed;
+    position: relative;
     left: 0px;
     top: 0;
     width: 100%;   /* o wigth: 0; */
 }
 
 
+
 .header a {
-    color:  white;
+    color:  rgb(30, 3, 36);
     text-decoration: none;
 }
 
@@ -68,7 +69,7 @@ body{
 
 
 .footer {
-    background: aqua;
+    background: rgb(219, 167, 243);
     padding: 4%;
     text-align: center;
     margin-top: 6rem;
