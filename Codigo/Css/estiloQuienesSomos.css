@@ -75,6 +75,10 @@ body{
 }
 
 .main {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: span 2;
+    gap: 1em;
     width: 90%;
     max-width: 900px;
     margin: auto;
@@ -84,6 +88,7 @@ body{
     align-items: center;
     flex-wrap: wrap-reverse;
     position: static;
+    grid-template-columns: repeat(2, 1fr);
  }
  .tabla {
     width:  30%;
