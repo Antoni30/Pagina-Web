@@ -4,7 +4,7 @@
 .social-networks {
     display: grid;
     grid-gap: 1px;
-    grid-template-columns: repeat(2,60px);
+    grid-template-columns: repeat(3,60px);
     grid-template-rows: repeat(1,auto);
     justify-items: end;
   } 
@@ -19,11 +19,11 @@
     align-items: center;
     text-decoration: none;
     border-radius: 50%;
-    margin: 0 6px;
+    margin: 0 5px;
     transition: transform 0.4s;
   }
   .social-networks a{
-      margin: 1.2rem;
+      margin: 1.2 rem;
   }
   .social-networks a:hover {
     transform: scale(1.3);
@@ -35,6 +35,8 @@
   .social-networks a.instagram {
     background-color: #d486ca;
   } 
+
+
 .caja-social_netwoks{
     position: relative;
     
@@ -73,13 +75,14 @@
 /*Estilo del Inicio y Carrusel*/
 .carousel-item{
   height: 32rem;
-  color: rgb(207, 113, 113);
+  background: url(../Diseños/Fondos/imagen_fondo5.jpg);
+  color: rgb(255, 245, 245);
   position: relative;
 
 }
 
+
 .container{
-  background: url(../Diseños/Fondos/imagen_fondo5.jpg);
   color:  rgb(21, 14, 61); 
   position: absolute;
   bottom:0;
@@ -100,10 +103,10 @@
 }
 
 .textoPrincipal{
-  background: url(../Diseños/Fondos/imagen_fondo3.jpg);
-  width: 1250px;
+  background: rgb(255, 255, 255);
+  width: 1350px;
   color:  rgb(1, 11, 24);
-  height: 100px;
+  height: 1px;
   display: block;
   margin: auto;
   text-align: center;
@@ -174,4 +177,36 @@
   transition: all 0.2s linear;
   border-radius: 5px;
    
+}
+
+
+/* Diseño Registrarse*/
+
+:root{
+  --main-bg:#c368e7;
+}
+
+.main-bg {
+  background: var(--main-bg) !important;
+}
+
+input:focus, button:focus {
+  border: 1px solid var(--main-bg) !important;
+  box-shadow: none !important;
+}
+
+.form-check-input:checked {
+  background-color: var(--main-bg) !important;
+  border-color: var(--main-bg) !important;
+}
+
+.card, .btn, input{
+  border-radius:0 !important;
+}
+
+.textoPrincipal2{
+  height: 35rem;
+  background: url(../Diseños/Fondos/imagen_fondo5.jpg);
+  color: rgb(255, 245, 245);
+  position: relative;
 }

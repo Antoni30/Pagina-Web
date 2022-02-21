@@ -59,9 +59,7 @@ class Quienes_Somos extends Component{
                     ofrecer los mejores servicios para el crecimiento de las empresas de nuestros clientes.
                 </p>
             </div>
-            <div class="imglogo">
-                <img src={logo} className="imagenlogo"/>
-            </div>
+        
         </main>
          </> <footer class="footer">
          <div class="contenedor">

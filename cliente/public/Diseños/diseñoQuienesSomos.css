@@ -1,5 +1,6 @@
 /*INICIO Diseño Quienes somos*/
 .main-qs {
+    background: url(../Diseños/Fondos/imagen_fondo5.jpg);
     display: grid;
     grid-template-columns: 26% 45% 26%;
     grid-template-rows: 500px;
@@ -12,14 +13,14 @@
     position: relative;
     left: 2.0px;
     align-self: center;
-    border: 1px solid blue;
+    border: 1px solid rgb(97, 16, 122);
     background: #ffffff;
     padding: 1em;
   }
   .vision {
     text-align: center;
     align-self: center;
-    border: 1px solid blue;
+    border: 1px solid rgb(108, 31, 134);
     background: #ffffff;
     padding: 1em;
   }
@@ -31,7 +32,7 @@
     /*justify-self: center;*/
   }
   .imagenlogo{
-    width: 500px;
+    width: 300px;
     height: 150px;
     display: block;
     margin: auto;

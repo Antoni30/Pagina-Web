@@ -7,6 +7,7 @@ import Contactos from './Componentes/Paginas/Contactos';
 import Formulario from './Componentes/Paginas/Formulario';
 import Servicios from './Componentes/Paginas/Servicios';
 import Quienes_Somos from './Componentes/Paginas/Quienes-Somos';
+import Registrarse from './Componentes/Paginas/Registrarse';
 class App extends Component{
   render(){
     return (
@@ -18,6 +19,7 @@ class App extends Component{
           <Route path='/Formulario' exact component={Formulario}/>
           <Route path='/Servicios' exact component={Servicios}/>
           <Route path='/Quienes_Somos' exact component={Quienes_Somos}/>
+          <Route path='/Registrarse' exact component={Registrarse}/>
         </Switch>
       </Router>
     );

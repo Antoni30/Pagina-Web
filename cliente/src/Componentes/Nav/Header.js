@@ -27,9 +27,12 @@ class Header extends Component{
         <li className="nav-item">
           <Link className="nav-link" to="/Formulario"><p className='letra'>Formulario</p></Link>
         </li>
+        
       </ul>
       <div className='caja-social_netwoks'>
+
         <div className="social-networks">
+            <a className="nav-item"> <Link className="nav-link" to="/Registrarse"className="Registrarse"><i className="fas fa-user-tie" ></i></Link> </a>
             <a href="https://www.facebook.com/LaelCEI/?ti=as" className="facebook"><i className="fab fa-facebook-f"></i></a>
             <a href="https://instagram.com/centro_estetico_lael?utm_medium=copy_link" className="instagram"><i className="fab fa-instagram"></i></a>
         </div>
