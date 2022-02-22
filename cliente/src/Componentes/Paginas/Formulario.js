@@ -1,31 +1,58 @@
-import React, { Component } from 'react';
+import React, {useState,useEffect} from 'react'
 import url from '../ImagenesProyecto/LogoCompletoLAEL.png'
-class Formulario extends Component{
-    /*state = {nombre:'',correo:' ',numT:'',numCel:'',generoS:'',fecha:'',selec:''};
-    valuetoSate=({name,value}) => {
-        this.setState(() => {
-            return {[name]:value};
-        });
+function Formulario(){
+    const[Cita,setCita]=useState({
+       Nombre:'',
+       Correo:'',
+       Telefono:'',
+       Celular:'',
+       Genero:'',
+       Fecha:'',
+       Hora:'',
+       Tratamiento:'' 
+    })
+    const insertar = e =>{
+        setCita({
+            ...Cita,
+            [e.target.name]:e.target.value
+        })
+    }
+    const handleSubmit=()=>{
+        const requestInit = {
+            method: 'POST',
+            headers:{'Content-Type':'application/json'},
+            body: JSON.stringify(Cita)
+        }
+        fetch("http://localhost:3001/api",requestInit)
+        .then(res=> res.json)
+        .then(res=> console.log(res));
 
-        esto va dentro del div
-        <pre> {JSON.stringify(this.state,null,2)} </pre>
-    };*/
-    render(){
+        setCita({
+            Nombre:'',
+            Correo:'',
+            Telefono:'',
+            Celular:'',
+            Genero:'',
+            Fecha:'',
+            Hora:'',
+            Tratamiento:'' 
+        })
+
+    }
     return(
         <div>
-        
         <div className='main-F'>
-                <form className='Formulario'>
+                <form className='Formulario' onSubmit={handleSubmit}>
                          <legend className='formu'>Formulario</legend>
                             <div className="nombre">
                                 <label>Nombre</label>
                                 <input
                                     id="nombre"
-                                    name="nombre"
+                                    name="Nombre"
                                     type="text"
                                     className="form-control" 
                                     placeholder="Ingrese Nombre"
-                                    //onChange={event => this.valuetoSate(event.target)}
+                                    onChange={insertar}
                                     required
                                 />
                             </div>
@@ -34,12 +61,11 @@ class Formulario extends Component{
                                 <label>Ingrese su Correo</label>
                                 <input 
                                  id="correo"
-                                 name="correo"
+                                 name="Correo"
                                  type="email"
                                  className="form-control" 
                                  placeholder="Ingrese Correo"
-                                 //onChange={event => this.valuetoSate(event.target)}
-                                 id="correo"
+                                 onChange={insertar}
                                  required
                                  />
                             </div>
@@ -48,11 +74,11 @@ class Formulario extends Component{
                                 <label>Numero de Telefono</label>
                                 <input
                                  id="numT"
-                                name="numT"
+                                name="Telefono"
                                  type="text"
                                  className="form-control"
+                                 onChange={insertar}
                                  placeholder="Ingrese su Telefono"
-                                 //onChange={event => this.valuetoSate(event.target)}
                                  required
                                  />
                             </div>
@@ -60,11 +86,11 @@ class Formulario extends Component{
                                 <label>Numero de Celular</label>
                                 <input
                                 id="numCel"
-                                 name="numCel"
+                                 name="Celular"
                                  type="text" 
                                  className="form-control" 
                                  placeholder="Ingrese Numero de Celular"
-                                 //onChange={event => this.valuetoSate(event.target)}
+                                 onChange={insertar}
                                  required
                                  />
                             </div>
@@ -73,30 +99,27 @@ class Formulario extends Component{
                                 <div className='uno'>
                                     Maculino:<input 
                                     type="radio" 
-                                    id="generoS"
-                                    name="generoS" 
+                                    name="Genero" 
                                     value="masculino"
-                                    //onChange={event => this.valuetoSate(event.target)}
+                                    onChange={insertar}
                                     required
                                     /><br/>
                                 </div>
                                 <div className='dos'>
                                     Femenino: <input 
                                     type="radio" 
-                                    id="generoS"
-                                    name="generoS" 
+                                    name="Genero" 
                                     value="Femenino"
-                                    //onChange={event => this.valuetoSate(event.target)}
+                                    onChange={insertar}
                                     required
                                     /><br/>
                                 </div>
                                 <div className='tres'>
                                     Otros: <input 
                                     type="radio" 
-                                    id="contactChoice1"
-                                    name="generoS" 
+                                    name="Genero" 
                                     value="Otros"
-                                    //onChange={event => this.valuetoSate(event.target)}
+                                    onChange={insertar}
                                     required
                                     /><br/>
                                 </div>
@@ -104,18 +127,24 @@ class Formulario extends Component{
                             <div className="fecha">
                                 <label>Seleccione fecha y Hora</label>
                                 <input 
-                                name="fecha"
-                                type="datetime-local" 
+                                name="Fecha"
+                                type="date" 
                                 className="form-control" 
-                                placeholder="Ingrese Numero de Celular"
-                                //onChange={event => this.valuetoSate(event.target)}
+                                onChange={insertar}
+                                required
+                                />
+                                <input 
+                                name="Hora"
+                                type="Time" 
+                                className="form-control" 
+                                onChange={insertar}
                                 required
                                 />
                             </div>
 
                             <div className="selec">
                                 <label>Seleccione Tratamiento</label>
-                                <select name="selec" className="form-select" id="selec">
+                                <select name="Tratamiento" className="form-select" id="selec" onChange={insertar}>
                                     <option>TRATAMIENTO COSMETICO FACIAL</option>
                                     <option>TRATAMIENTO CORPORAL PARA AFITMAR Y MODEAR CUERPO</option>
                                     <option>DEPILACION</option>
@@ -126,21 +155,18 @@ class Formulario extends Component{
                                     <option>ACESORIA DE IMAGEN</option>
                                 </select>
                             </div>
-
                             <button  className='boton' type="submit" className="btn btn-primary">Submit</button>
-                        
                 </form>
                 <div className='Mapa'>
                         <img src={url} className="imagenIndex3"/>
                 </div>
         </div>
-        <footer class="footer">
-         <div class="contenedor">
+        <footer className="footer">
+         <div className="contenedor">
              Centro Estetico Integral LAEL &copy; 2021
          </div>
      </footer>
         </div>
     );
-}
 }
 export default Formulario;
