@@ -80,6 +80,12 @@
 .fecha{
     grid-area: item-7;
 }
+.caja-fecha-hora{
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,auto);
+}
 .selec{
     grid-area: item-8;
 }
@@ -93,7 +99,7 @@
     top:12rem;
 }
 .imagenIndex3{
-    width: 500px;
+    width: 580px;
     height: 250px;
     display: block;
     margin: auto;

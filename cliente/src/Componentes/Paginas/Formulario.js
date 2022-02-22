@@ -37,7 +37,6 @@ function Formulario(){
             Hora:'',
             Tratamiento:'' 
         })
-
     }
     return(
         <div>
@@ -126,20 +125,26 @@ function Formulario(){
                             </div>
                             <div className="fecha">
                                 <label>Seleccione fecha y Hora</label>
-                                <input 
-                                name="Fecha"
-                                type="date" 
-                                className="form-control" 
-                                onChange={insertar}
-                                required
-                                />
-                                <input 
-                                name="Hora"
-                                type="Time" 
-                                className="form-control" 
-                                onChange={insertar}
-                                required
-                                />
+                                <div className='caja-fecha-hora'>
+                                <div className='fechaC'>
+                                    <input 
+                                    name="Fecha"
+                                    type="date" 
+                                    className="form-control" 
+                                    onChange={insertar}
+                                    required
+                                    />
+                                </div>
+                                <div className='hora'>
+                                    <input 
+                                    name="Hora"
+                                    type="Time" 
+                                    className="form-control" 
+                                    onChange={insertar}
+                                    required
+                                    />
+                                </div>
+                                </div>     
                             </div>
 
                             <div className="selec">
