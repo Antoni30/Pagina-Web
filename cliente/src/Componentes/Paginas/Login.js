@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import Formulario from '../Paginas/Formulario';
-/*import Img1 from './ImagenesProyecto/marquesina1.gif'*/
-
-class Login extends Component{
-    render(){
+import {Link} from 'react-router-dom'
+function Login(){
     return(
         <div className="container">
         <div className="row justify-content-center mt-5">
@@ -27,7 +24,9 @@ class Login extends Component{
                 <label for="remember" className="form-label">Remember Me</label>
               </div>
               <div className="d-grid">
-                <button  type="submit" className="btn text-light main-bg" href='/Formulario'>Login</button>
+                  <Link className="nav-link" to="/Tabla">
+                  <button  className='boton'  type="submit" className="btn btn-primary">Ingresar</button>
+                 </Link>
               </div>
             </form>
             </div>
@@ -36,6 +35,5 @@ class Login extends Component{
          </div>
      </div>
     );
-}
 }
 export default Login;

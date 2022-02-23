@@ -26,7 +26,6 @@ function Formulario(){
         fetch("http://localhost:3001/api",requestInit)
         .then(res=> res.json)
         .then(res=> console.log(res));
-
         setCita({
             Nombre:'',
             Correo:'',

@@ -14,11 +14,9 @@ const dbOptions={
 
 app.set('port', process.env.PORT || 3001);
 
-
 app.use(cors());
 app.use(myconn(mysql,dbOptions,'single'));
 app.use(express.json());
-
 
 app.get('/',(req,res)=>{
     res.send("Servidor Activo")
