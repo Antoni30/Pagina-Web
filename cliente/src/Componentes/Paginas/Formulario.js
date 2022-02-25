@@ -1,5 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import url from '../ImagenesProyecto/LogoCompletoLAEL.png'
+import swal from 'sweetalert'
+//npm i sweetAlert
 function Formulario(){
     const[Cita,setCita]=useState({
        Nombre:'',
@@ -17,7 +19,16 @@ function Formulario(){
             [e.target.name]:e.target.value
         })
     }
+    const temporizador=setInterval(()=>{
+        console.log(new Date().toLocaleTimeString());
+    },10000);
     const handleSubmit=()=>{
+        swal({
+            text: "Formulario Registrado",
+            icon: "success",
+            //button: "OK"
+        })
+        temporizador();
         const requestInit = {
             method: 'POST',
             headers:{'Content-Type':'application/json'},
@@ -25,7 +36,8 @@ function Formulario(){
         }
         fetch("http://localhost:3001/api",requestInit)
         .then(res=> res.json)
-        .then(res=> console.log(res));
+        .then(res=> console.log(res));  
+
         setCita({
             Nombre:'',
             Correo:'',
